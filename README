@@ -1,0 +1,93 @@
+# Arquitetura Hub‑Spoke no Azure — Laboratório Completo
+
+Este repositório demonstra a implementação prática de uma arquitetura **Hub‑Spoke no Microsoft Azure**, validando:
+
+- Comunicação centralizada via Hub  
+- Isolamento entre VNets Spoke  
+- Propagação de rotas via peering regional e global  
+- Testes reais de conectividade entre máquinas  
+- Rotas efetivas em cada interface  
+
+Esta documentação serve como referência para entender na prática como funciona o modelo Hub‑Spoke.
+
+---
+
+# Arquitetura do Ambiente
+
+<p align="center">
+  <img src="imagens/teste.drawio.png" />
+</p>
+
+## Endereçamento
+
+| Componente | VNet | Subnet | Região |
+|-----------|------|--------|--------|
+| **Hub** | 10.1.0.0/16 | 10.1.1.0/24 | Brazil South |
+| **Spoke HML** | 10.0.0.0/16 | 10.0.1.0/24 e 10.0.2.0/24 | East US |
+| **Spoke DEV** | 10.2.0.0/16 | 10.2.1.0/24 | Brazil South |
+
+---
+
+# ☁️ Máquinas Virtuais do Ambiente
+
+<p align="center">
+  <img src="imagens/vms.png" />
+</p>
+
+---
+
+# 🔗 Emparelhamentos (Peering)
+
+<p align="center">
+  <img src="imagens/Emparelhamento.png" />
+</p>
+
+- **vnet-hub ↔ vnet-hml (global)**
+- **vnet-hub ↔ vnet-dev (regional)**
+- ❌ Sem peering entre spokes
+
+---
+
+# Rotas Efetivas
+
+<p align="center">
+  <img src="imagens/rotas.png" />
+</p>
+
+---
+
+# 🔍 Testes Práticos de Comunicação
+
+## 🟥 Spoke HML **não** fala com o Spoke DEV
+
+<p align="center">
+  <img src="imagens/dev fala apenas com hub.png" />
+</p>
+
+---
+
+## 🟦 Spoke HML → Hub
+
+<p align="center">
+  <img src="imagens/comunicacao .png" />
+</p>
+
+---
+
+## 🟩 Spoke DEV → Hub
+
+<p align="center">
+  <img src="imagens/comunicacao .png" />
+</p>
+
+---
+
+# 📌 Conclusões
+
+- ✔ Isolamento garantido entre spokes
+- ✔ Centralização no Hub funcionando
+- ✔ Peering regional e global funcionando
+- ✔ Rotas propagadas corretamente
+
+---
+
