@@ -76,16 +76,4 @@ Este repositório demonstra a implementação prática de uma arquitetura **Hub�
 
 ---
 
-# 📁 Estrutura do Repositório
 
-```
-📦 hub-spoke-azure
- ┣ 📂 rede hub
- ┃ ┣ Emparelhamento.png
- ┃ ┣ comunicacao .png
- ┃ ┣ dev fala apenas com hub.png
- ┃ ┣ rotas.png
- ┃ ┣ teste.drawio.png
- ┃ ┗ vms.png
- ┗ README.md
-```
