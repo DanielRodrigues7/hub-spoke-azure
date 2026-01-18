@@ -1,21 +1,20 @@
+
 # Arquitetura Hub‑Spoke no Azure — Laboratório Completo
 
 Este repositório demonstra a implementação prática de uma arquitetura **Hub‑Spoke no Microsoft Azure**, validando:
 
-- Comunicação centralizada via Hub  
-- Isolamento entre VNets Spoke  
-- Propagação de rotas via peering regional e global  
-- Testes reais de conectividade entre máquinas  
-- Rotas efetivas em cada interface  
-
-Esta documentação serve como referência para entender na prática como funciona o modelo Hub‑Spoke.
+- Comunicação centralizada via Hub
+- Isolamento entre VNets Spoke
+- Propagação de rotas via peering regional e global
+- Testes reais de conectividade entre máquinas
+- Rotas efetivas em cada interface
 
 ---
 
 # Arquitetura do Ambiente
 
 <p align="center">
-  <img src="imagens/teste.drawio.png" />
+  <img src="rede hub/teste.drawio.png" />
 </p>
 
 ## Endereçamento
@@ -31,7 +30,7 @@ Esta documentação serve como referência para entender na prática como funcio
 # ☁️ Máquinas Virtuais do Ambiente
 
 <p align="center">
-  <img src="imagens/vms.png" />
+  <img src="rede hub/vms.png" />
 </p>
 
 ---
@@ -39,7 +38,7 @@ Esta documentação serve como referência para entender na prática como funcio
 # 🔗 Emparelhamentos (Peering)
 
 <p align="center">
-  <img src="imagens/Emparelhamento.png" />
+  <img src="rede hub/Emparelhamento.png" />
 </p>
 
 - **vnet-hub ↔ vnet-hml (global)**
@@ -48,10 +47,10 @@ Esta documentação serve como referência para entender na prática como funcio
 
 ---
 
-# Rotas Efetivas
+# 🛣️ Rotas Efetivas
 
 <p align="center">
-  <img src="imagens/rotas.png" />
+  <img src="rede hub/rotas.png" />
 </p>
 
 ---
@@ -61,7 +60,7 @@ Esta documentação serve como referência para entender na prática como funcio
 ## 🟥 Spoke HML **não** fala com o Spoke DEV
 
 <p align="center">
-  <img src="imagens/dev fala apenas com hub.png" />
+  <img src="rede hub/dev fala apenas com hub.png" />
 </p>
 
 ---
@@ -69,7 +68,7 @@ Esta documentação serve como referência para entender na prática como funcio
 ## 🟦 Spoke HML → Hub
 
 <p align="center">
-  <img src="imagens/comunicacao .png" />
+  <img src="rede hub/comunicacao .png" />
 </p>
 
 ---
@@ -77,7 +76,7 @@ Esta documentação serve como referência para entender na prática como funcio
 ## 🟩 Spoke DEV → Hub
 
 <p align="center">
-  <img src="imagens/comunicacao .png" />
+  <img src="rede hub/comunicacao .png" />
 </p>
 
 ---
