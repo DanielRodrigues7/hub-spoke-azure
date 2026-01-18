@@ -86,19 +86,6 @@ rede hub/comunicacao .png
 
 ---
 
-# 📁 Estrutura do Repositório
-```
-README.md
-rede hub/
-   Emparelhamento.png
-   comunicacao .png
-   dev fala apenas com hub.png
-   rotas.png
-   teste.drawio.png
-   vms.png
-```
-
----
 
 # 📫 Contato
 LinkedIn: https://www.linkedin.com/in/daniel-rodrigues-358b41121/
