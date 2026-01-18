@@ -1,5 +1,5 @@
 
-# Arquitetura Hub‑Spoke no Azure — Laboratório Completo
+# 🌀 Arquitetura Hub‑Spoke no Azure — Laboratório Completo
 
 Este repositório demonstra a implementação prática de uma arquitetura **Hub‑Spoke no Microsoft Azure**, validando:
 
@@ -11,82 +11,84 @@ Este repositório demonstra a implementação prática de uma arquitetura **Hub�
 
 ---
 
-# Arquitetura do Ambiente
+# 🧭 Arquitetura do Ambiente
 
-<p align="center">
-  <img src="rede hub/teste.drawio.png" />
-</p>
+<rede hub/teste.drawio.png>
 
 ## Endereçamento
 
-| Componente | VNet | Subnet | Região |
-|-----------|------|--------|--------|
-| **Hub** | 10.1.0.0/16 | 10.1.1.0/24 | Brazil South |
-| **Spoke HML** | 10.0.0.0/16 | 10.0.1.0/24 e 10.0.2.0/24 | East US |
-| **Spoke DEV** | 10.2.0.0/16 | 10.2.1.0/24 | Brazil South |
+| Componente | VNet         | Subnet                  | Região       |
+|-----------|--------------|--------------------------|--------------|
+| **Hub**        | 10.1.0.0/16 | 10.1.1.0/24              | Brazil South |
+| **Spoke HML**  | 10.0.0.0/16 | 10.0.1.0/24 / 10.0.2.0/24 | East US      |
+| **Spoke DEV**  | 10.2.0.0/16 | 10.2.1.0/24              | Brazil South |
 
 ---
 
-# ☁️ Máquinas Virtuais do Ambiente
+# ☁️ Máquinas Virtuais
 
-<p align="center">
-  <img src="rede hub/vms.png" />
-</p>
+<rede hub/vms.png>
 
 ---
 
 # 🔗 Emparelhamentos (Peering)
 
-<p align="center">
-  <img src="rede hub/Emparelhamento.png" />
-</p>
+<rede hub/Emparelhamento.png>
 
-- **vnet-hub ↔ vnet-hml (global)**
-- **vnet-hub ↔ vnet-dev (regional)**
-- ❌ Sem peering entre spokes
+- vnet-hub ↔ vnet-hml (Global Peering)
+- vnet-hub ↔ vnet-dev (Regional Peering)
+- ❌ Não existe peering entre spokes
 
 ---
 
 # 🛣️ Rotas Efetivas
 
-<p align="center">
-  <img src="rede hub/rotas.png" />
-</p>
+<rede hub/rotas.png>
 
 ---
 
 # 🔍 Testes Práticos de Comunicação
 
-## 🟥 Spoke HML **não** fala com o Spoke DEV
+## 🟥 1) Spoke HML → Spoke DEV (Bloqueado)
 
-<p align="center">
-  <img src="rede hub/dev fala apenas com hub.png" />
-</p>
+<rede hub/dev fala apenas com hub.png>
 
----
-
-## 🟦 Spoke HML → Hub
-
-<p align="center">
-  <img src="rede hub/comunicacao .png" />
-</p>
+Resultado esperado: **spokes não se comunicam entre si**.
 
 ---
 
-## 🟩 Spoke DEV → Hub
+## 🟦 2) Spoke HML → Hub
 
-<p align="center">
-  <img src="rede hub/comunicacao .png" />
-</p>
+<rede hub/comunicacao .png>
+
+---
+
+## 🟩 3) Spoke DEV → Hub
+
+<rede hub/comunicacao .png>
 
 ---
 
 # 📌 Conclusões
 
-- ✔ Isolamento garantido entre spokes
-- ✔ Centralização no Hub funcionando
-- ✔ Peering regional e global funcionando
+- ✔ Spokes permanecem isolados
+- ✔ Hub centraliza a comunicação
+- ✔ Peering global e regional funcionando
 - ✔ Rotas propagadas corretamente
+- ✔ Comportamento alinhado ao modelo Microsoft
 
 ---
 
+# 📁 Estrutura do Repositório
+
+```
+📦 hub-spoke-azure
+ ┣ 📂 rede hub
+ ┃ ┣ Emparelhamento.png
+ ┃ ┣ comunicacao .png
+ ┃ ┣ dev fala apenas com hub.png
+ ┃ ┣ rotas.png
+ ┃ ┣ teste.drawio.png
+ ┃ ┗ vms.png
+ ┗ README.md
+```
