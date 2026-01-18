@@ -24,7 +24,8 @@ O ambiente contém:
 - Peering Hub ↔ Spoke DEV (regional)
 
 ### 📸 Diagrama da Arquitetura
-rede hub/teste.drawio.png
+
+![diagrama](<rede hub/teste.drawio.png>)
 
 ---
 
@@ -39,13 +40,14 @@ rede hub/teste.drawio.png
 ---
 
 ## 🖥️ Máquinas Virtuais do Ambiente
-rede hub/vms.png
+
+![vms](<rede hub/vms.png>)
 
 ---
 
 ## 🔗 Emparelhamentos (Peering)
 
-rede hub/Emparelhamento.png
+![emparelhamento](<rede hub/Emparelhamento.png>)
 
 - **Hub ↔ HML** — Peering Global
 - **Hub ↔ DEV** — Peering Regional
@@ -54,26 +56,30 @@ rede hub/Emparelhamento.png
 ---
 
 ## 🛣️ Rotas Efetivas
-rede hub/rotas.png
+
+![rotas](<rede hub/rotas.png>)
 
 ---
 
 # 🔍 Testes de Comunicação
 
 ## 🟥 1. Spoke HML **não** consegue falar com o Spoke DEV
-rede hub/dev fala apenas com hub.png
+
+![hml-dev](<rede hub/dev fala apenas com hub.png>)
 
 **Resultado esperado:** spokes ficam isolados.
 
 ---
 
 ## 🟦 2. Spoke HML → Hub (OK)
-rede hub/comunicacao .png
+
+![hml-hub](<rede hub/comunicacao .png>)
 
 ---
 
 ## 🟩 3. Spoke DEV → Hub (OK)
-rede hub/comunicacao .png
+
+![dev-hub](<rede hub/comunicacao .png>)
 
 ---
 
