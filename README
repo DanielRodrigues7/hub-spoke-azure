@@ -13,7 +13,7 @@ Este repositório demonstra a implementação prática de uma arquitetura **Hub�
 
 # 🧭 Arquitetura do Ambiente
 
-<rede hub/teste.drawio.png>
+![diagrama](rede hub/teste.drawio.png)
 
 ## Endereçamento
 
@@ -27,13 +27,13 @@ Este repositório demonstra a implementação prática de uma arquitetura **Hub�
 
 # ☁️ Máquinas Virtuais
 
-<rede hub/vms.png>
+![vms](rede hub/vms.png)
 
 ---
 
 # 🔗 Emparelhamentos (Peering)
 
-<rede hub/Emparelhamento.png>
+![emparelhamento](rede hub/Emparelhamento.png)
 
 - vnet-hub ↔ vnet-hml (Global Peering)
 - vnet-hub ↔ vnet-dev (Regional Peering)
@@ -43,7 +43,7 @@ Este repositório demonstra a implementação prática de uma arquitetura **Hub�
 
 # 🛣️ Rotas Efetivas
 
-<rede hub/rotas.png>
+![rotas](rede hub/rotas.png)
 
 ---
 
@@ -51,21 +51,19 @@ Este repositório demonstra a implementação prática de uma arquitetura **Hub�
 
 ## 🟥 1) Spoke HML → Spoke DEV (Bloqueado)
 
-<rede hub/dev fala apenas com hub.png>
-
-Resultado esperado: **spokes não se comunicam entre si**.
+![hml-dev](rede hub/dev fala apenas com hub.png)
 
 ---
 
 ## 🟦 2) Spoke HML → Hub
 
-<rede hub/comunicacao .png>
+![hml-hub](rede hub/comunicacao .png)
 
 ---
 
 ## 🟩 3) Spoke DEV → Hub
 
-<rede hub/comunicacao .png>
+![dev-hub](rede hub/comunicacao .png)
 
 ---
 
@@ -75,7 +73,6 @@ Resultado esperado: **spokes não se comunicam entre si**.
 - ✔ Hub centraliza a comunicação
 - ✔ Peering global e regional funcionando
 - ✔ Rotas propagadas corretamente
-- ✔ Comportamento alinhado ao modelo Microsoft
 
 ---
 
